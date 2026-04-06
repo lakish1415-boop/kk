@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Lakshmi Priya ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: black;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      max-width: 600px;
+      padding: 20px;
+      animation: fade 1.2s ease;
+    }
+
+    h1 { font-size: 28px; }
+    p { font-size: 18px; line-height: 1.7; }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      background: #ff2e63;
+      color: white;
+    }
+
+    button:hover { background: #ff0040; }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .small {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card" id="box">
+  <h1>Lakshmi Priya ❤️</h1>
+  <p>This is not just a birthday wish…<br>It’s a question… 😌</p>
+  <button onclick="next()">Start</button>
+</div>
+
+<script>
+let step = 0;
+
+const pages = [
+
+{
+t: "Why us? 💭",
+c: "You were born on April 07, 1996…\n\nI met you on Nov 20, 2012…\n\nOut of everyone in this world…\nWhy you… and why me?",
+b: "Next 😌"
+},
+
+{
+t: "Destiny ❤️",
+c: "Why did we meet?\nWhy did we stay?\n\nEven if life tried to separate us…\nWhy did we still choose each other?",
+b: "Continue"
+},
+
+{
+t: "Maybe… 😌",
+c: "Somewhere… it was already written…\n\n“These two… should come this far together.” ❤️",
+b: "Next"
+},
+
+{
+t: "Time ⏳",
+c: "After 16… you came into my life…\n\nNow you are turning 30 😏\n\nAlmost half your life… has me in it.",
+b: "Wait… what? 😄"
+},
+
+{
+t: "Calculation 😌",
+c: "30 / 2 = 15 years…\n\n15 years of you… with me ❤️\n\nNot luck… something deeper.",
+b: "Next ❤️"
+},
+
+{
+t: "Our Bond 💫",
+c: "We started as strangers…\n\nSchool brought us together…\nWe smiled… friendship held us…\nWe cried… love held us…\nWe married… God held us…\n\nSo now… we hold each other ❤️",
+b: "Continue 😌"
+},
+
+{
+t: "Real Life 💭",
+c: "Life didn’t give roses every day…\n\nWe had hard times…\n\nBut what we have?\nIs rare… real… and still choosing each other ❤️",
+b: "Next"
+},
+
+{
+t: "Today 🎂",
+c: "My little girl turning 30 😏\n\nStill innocent… loving… caring…\n\nAnd yes… still irritating 😌❤️",
+b: "Hey 😄"
+},
+
+{
+t: "Truth 😈",
+c: "You lived 30 years…\n\nBut your best decision?\nMeeting me in 2012 😏\n\nAgree or agree?",
+b: "Agree 😄"
+},
+
+{
+t: "Time You Lived ⏰",
+c: "10,957 days\n15,778,080 minutes\n946,684,800 seconds\n\nAnd my favorite part?\nThe time with me 😌❤️",
+b: "Next ❤️"
+},
+
+{
+t: "Languages 🌍",
+c: "Happy Birthday ❤️\nபிறந்தநாள் வாழ்த்துக்கள்\nजन्मदिन मुबारक हो\nపుట్టినరోజు శుభాకాంక్షలు\nಹುಟ್ಟುಹಬ್ಬದ ಶುಭಾಶಯಗಳು\nജന്മദിനാശംസകൾ\nवाढदिवसाच्या शुभेच्छा\nજન્મદિવસની શુભેચ્છાઓ\nਜਨਮਦਿਨ ਮੁਬਾਰਕ\nশুভ জন্মদিন",
+b: "Final ❤️"
+},
+
+{
+t: "Happy Birthday Lakshmi Priya 🎂❤️",
+c: "You are my everything…\nMy friend… my love… my wife…\n\nMy peace… my chaos… my whole world ❤️\n\nStay the same… grow beautifully…\n\nAnd keep being mine… always 😌",
+b: "One last thing 😏"
+},
+
+{
+t: "Final 😈❤️",
+c: "Out of 946,684,800 seconds…\n\nI choose you… again ❤️\n\nNow come here… 😌",
+b: "Replay 🔁"
+}
+
+];
+
+function next() {
+  step++;
+  if (step >= pages.length) step = 0;
+
+  document.getElementById("box").innerHTML = `
+    <h1>${pages[step].t}</h1>
+    <p>${pages[step].c.replace(/\\n/g,"<br>")}</p>
+    <button onclick="next()">${pages[step].b}</button>
+    <div class="small" onclick="secret()">Tap only if you love me 😏</div>
+  `;
+}
+
+function secret() {
+  alert("I knew it 😌❤️");
+}
+</script>
+
+</body>
+</html>
